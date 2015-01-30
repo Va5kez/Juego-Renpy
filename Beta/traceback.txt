@@ -1,0 +1,46 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+Exception: Style 'mm' does not exist.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in script
+    $ ui.interact()
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\ast.py", line 785, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\python.py", line 1382, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 29, in <module>
+    $ ui.interact()
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 2149, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 2397, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\screen.py", line 388, in visit_all
+    self.child.visit_all(callback)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 338, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 335, in visit_all
+    for d in self.visit():
+  File "C:\Users\Pavilion 14-N036\Desktop\renpy-6.18.3-sdk\renpy\display\layout.py", line 908, in visit
+    return [ self.style.background ] + self.children
+  File "styleproperties.pxi", line 997, in renpy.styleclass.Style.background.__get__ (gen\renpy.styleclass.c:109913)
+  File "style.pyx", line 456, in renpy.style.StyleCore._get (gen\renpy.style.c:6189)
+  File "style.pyx", line 619, in renpy.style.build_style (gen\renpy.style.c:8238)
+  File "style.pyx", line 130, in renpy.style.get_full_style (gen\renpy.style.c:2300)
+  File "style.pyx", line 82, in renpy.style.get_style (gen\renpy.style.c:1628)
+Exception: Style 'mm' does not exist.
+
+Windows-post2008Server-6.2.9200
+Ren'Py 6.18.3.761
+Beta 0.0
